@@ -1,0 +1,12 @@
+/*
+Theme Name: Clean
+Theme URI: https://codingavatar.com
+Author: GRAND SOFT TECHNOLOGY
+Author URI: https://codeavater.com/
+Description:Clean business theme 
+Version: 1.0
+
+*/
+.wpcf7-form-control.wpcf7-checkbox.form-control{
+display:none;
+}
