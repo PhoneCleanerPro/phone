@@ -38,7 +38,7 @@ include_once('include/taxonomy.php');
 add_image_size('staffs_image',253,253 ,true);
 
 // Activate Theme Options 
-require_once('admin/index.php');
+require_once('Admin/index.php');
 
 
 

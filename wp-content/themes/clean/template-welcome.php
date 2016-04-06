@@ -42,18 +42,16 @@ if (function_exists('get_wp_term_image'))
     $meta_image2 = get_wp_term_image(6); 
     $meta_image3 = get_wp_term_image(9); 
     $meta_image4 = get_wp_term_image(8); 
-
-
 }
 ?>
 
 <?php
-$taxonomy = 'themes_categories';
-$queried_term = get_query_var($taxonomy);
-$terms = get_terms($taxonomy, 'slug='.$queried_term);
-if ($terms) {
-  foreach($terms as $term) {
-   $cat_name[]=$term->name;
+$texonomy_id='themes_categories';
+$queried_term = get_query_var($texonomy_id);
+$term= get_terms($texonomy_id, 'slug='.$queried_term);
+if ($term) {
+  foreach($term as $terms) {
+   $cat_name[]=$terms->name;
   }
 }
 ?>
