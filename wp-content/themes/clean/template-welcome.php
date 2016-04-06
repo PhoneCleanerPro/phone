@@ -55,9 +55,6 @@ if ($term) {
   }
 }
 ?>
-
-
-
        <div class="col-sm-3">
           <div class="main_img"> <img src="<?php echo $meta_image1;?>" alt="">
             <div class="main_bdr">
@@ -94,20 +91,12 @@ if ($term) {
     <div class="contnt_ofr">
       <div class="container">
         <div class="col-sm-4">
-		<?php global $data;?>
-<?php if($data['media_upload_356']) :?>
-<div class="contnt_ofr_lft"> <img src="<?php echo $data['media_upload_356'];?>" alt="main_women"> </div>
-<?php else: ?>
-<div class="contnt_ofr_lft"> <img src="<?php echo get_stylesheet_directory_uri();?>/images/main_women.png" alt="main_women"> </div>
+<?php global $data;?>
+		<?php if($data['media_upload_356']) :?>
+				<div class="contnt_ofr_lft"> <img src="<?php echo $data['media_upload_356'];?>" alt="main_women"> </div>
+		<?php else: ?>
+				<div class="contnt_ofr_lft"> <img src="<?php echo get_stylesheet_directory_uri();?>/images/main_women.png" alt="main_women"> </div>
 <?php endif;?>
-		
-		
-		
-		
-		
-		
-		
-
         </div>
         <div class="col-sm-8">
           <div class="contnt_ofr_rgt">
@@ -164,7 +153,6 @@ if ($term) {
 				  </div>
 
 		<?php endforeach; ?>
-
         </div>
       </div>
     </div>

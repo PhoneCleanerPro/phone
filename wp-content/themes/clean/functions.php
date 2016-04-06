@@ -41,7 +41,20 @@ add_image_size('staffs_image',253,253 ,true);
 require_once('Admin/index.php');
 
 
+if (class_exists('MultiPostThumbnails')) {
 
+new MultiPostThumbnails(array(
+'label' => 'Secondary Image',
+'id' => 'secondary-image',
+'post_type' => 'service'
+ ) );
+ new MultiPostThumbnails(array(
+'label' => 'Secondary Image2',
+'id' => 'secondary-image2',
+'post_type' => 'service'
+ ) );
+
+ }
 
 
 

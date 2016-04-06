@@ -11,7 +11,7 @@ function clean_theme_costom_post(){
 		'add_new'=>'Please add new service',
 	
 	),	
-	'supports'=>array('title','thumbnail')
+	'supports'=>array('title','thumbnail','editor')
 	));	
 //Clever Staffs Custom Post
 	register_post_type('Staffs', array(
