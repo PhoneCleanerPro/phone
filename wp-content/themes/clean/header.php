@@ -38,7 +38,12 @@ $('#myModal').on('shown.bs.modal', function () {
       <div class="header_logo">
         <div class="container">
           <div class="col-sm-6">
-            <div class="logo"><a href="<?php echo get_site_url(); ?>"><img src="<?php echo get_stylesheet_directory_uri();?>/images/logo.png" alt="logo"></a></div>
+<?php global $data;?>
+<?php if($data['media_upload_35']) :?>
+<div class="logo"><a href="<?php echo get_site_url(); ?>"><img src="<?php echo $data['media_upload_35'];?>" alt="logo"></a></div>
+<?php else: ?>
+<div class="logo"><a href="<?php echo get_site_url(); ?>"><img src="<?php echo get_stylesheet_directory_uri();?>/images/logo.png" alt="logo"></a></div>
+<?php endif;?>
           </div>
           <div class="col-sm-6">
             <div class="mob_con"> <img src="<?php echo get_stylesheet_directory_uri();?>/images/mobile.png" alt="logo">
