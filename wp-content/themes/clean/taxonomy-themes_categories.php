@@ -57,48 +57,55 @@ get_header(); ?>
 
 
 <div class="col-sm-8">
-		<?php 	$i=0;	while (have_posts()) : the_post();?>
 
+<?php 
+
+$i = 1;
+?>
+<?php if (have_posts()) : ?>
+<?php while (have_posts()) : the_post(); ?>
+<?php if ($i == 1) { ?>
+           <div class="windw_contnt">
+              <h2><?php the_title();?></h2>
+			  <?php the_post_thumbnail('full');?>
+			  <?php the_content(); ?>
+			  </div>	
+<div class="row">
+<?php } elseif ($i == 2) { ?>
+
+              <div class="col-sm-6">
+					<div class="wnd_cnt">	
+					<?php the_post_thumbnail('medium');?>
+					  <h3><?php the_title();?></h3>
+						<?php the_content(); ?>
+					</div>
+              </div>  
+<?php } else { ?>			
+				<div class="col-sm-6">
+					<div class="wnd_cnt">
+					<?php the_post_thumbnail('medium');?>
+					  <h3><?php the_title();?></h3>
+					 <?php the_content();?>
+					</div>
+              </div>
+			  
+			  <div class="wnd_btn"> <br /><br /><br /><a href="<?php get_the_permalink();?>">Schedule your window cleaning estimate today!sfsdfsd</a> </div>		
+			  
+			  </div>
+<?php } ?>
+    <?php $i++; ?>
+    <?php endwhile; ?>
+<?php endif; ?>
 		   
 		  
- <?php if($i==1) {  ?>
-            <div class="windw_contnt">
-              <h2><?php the_title();?></h2>
-			  <?php the_post_thumbnail();?>
-			  <?php the_content(); ?>
 
-            </div>
-			    
- <?php }if($i==2){ ?>
-<div class="row">
-              <div class="col-sm-6">
-                <div class="wnd_cnt"><a href="javascript:void(0)"> <img  src="<?php echo get_stylesheet_directory_uri();?>/images/spring_grl.png" alt="window"></a>
-                  <h3><a href="javascript:void(0)">Quidem rerum facilis est et expedita distinctio</a></h3>
-                  <p>Voluptatem sequi nesciunt. Neque porro quis quaml est, quilas dolorem ipsum quia dolor sit amet, consectetur, adipisci velitar sed quia non numquam eius modi tempora.</p>
-                </div>
-              </div>             
- <div class="col-sm-6">
-                <div class="wnd_cnt"><a href="javascript:void(0)"> <img  src="<?php echo get_stylesheet_directory_uri();?>/images/spring_grl.png" alt="window"></a>
-                  <h3><a href="javascript:void(0)">Quidem rerum facilis est et expedita distinctio</a></h3>
-                  <p>Voluptatem sequi nesciunt. Neque porro quis quaml est, quilas dolorem ipsum quia dolor sit amet, consectetur, adipisci velitar sed quia non numquam eius modi tempora.</p>
-                </div>
-              </div>
+    	    
 
 
-<?php }?> 
-        
-
-        
-
-
-   
-		  
-		  		<?php 	$i++; endwhile;?>			
-				<?php wp_reset_query();?>     
-		           <div class="wnd_btn"> <a href="javascript:void(0)">Schedule your window cleaning estimate today!</a> </div>
-          </div>
 		  
         </div>
+		
+		
       </div>
     </div>
   </section>
