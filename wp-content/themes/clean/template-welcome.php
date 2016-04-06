@@ -52,34 +52,36 @@ $term= get_terms($texonomy_id, 'slug='.$queried_term);
 if ($term) {
   foreach($term as $terms) {
    $cat_name[]=$terms->name;
+
   }
 }
 ?>
+
        <div class="col-sm-3">
           <div class="main_img"> <img src="<?php echo $meta_image1;?>" alt="">
             <div class="main_bdr">
-              <h3><?php echo $cat_name[1];?></h3>
-              <a href="<?php echo get_term_link( 7 );?>">view details</a> </div>
+              <h3>home spring cleaning</h3>
+              <a href="<?php echo get_term_link( 6);?>">view details</a> </div>
           </div>
         </div>
         <div class="col-sm-3">
           <div class="main_img"> <img src="<?php echo $meta_image2;?>" alt="baby">
             <div class="main_bdr">
-              <h3><?php echo $cat_name[0];?></h3>
-              <a href="<?php echo get_term_link( 6);?>">view details</a> </div>
+              <h3>general cleaning</h3>
+              <a href="<?php echo get_term_link( 7);?>">view details</a> </div>
           </div>
         </div>
         <div class="col-sm-3">
           <div class="main_img"> <img src="<?php echo $meta_image3;?>" alt="baby">
             <div class="main_bdr">
-              <h3><?php echo $cat_name[2];?></h3>
+              <h3>oven cleaning</h3>
               <a href="<?php echo get_term_link( 9);?>">view details</a> </div>
           </div>
         </div>
         <div class="col-sm-3">
           <div class="main_img"> <img src="<?php echo $meta_image4;?>" alt="baby">
             <div class="main_bdr">
-              <h3><?php echo $cat_name[3];?></h3>
+              <h3>proffessional office cleaning</h3>
               <a href="<?php echo get_term_link( 8);?>">view details</a> </div>
           </div>
         </div>

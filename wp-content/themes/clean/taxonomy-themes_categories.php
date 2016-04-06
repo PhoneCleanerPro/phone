@@ -11,7 +11,10 @@ get_header(); ?>
         <div class="ban_con">
           <div class="row">
             <div class="col-sm-4">
-              <h2>Home Spring Cleaning</h2>
+			<?php 
+			$term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) ); 
+			?>
+              <h2><?php echo $term->name; ?></h2>
             </div>
             <div class="col-sm-8"> <img style="padding-top:15px" class="img-responsive" src="<?php echo get_stylesheet_directory_uri();?>/images/spring_girl.png" alt="man"> </div>
           </div>
@@ -19,6 +22,10 @@ get_header(); ?>
       </div>
     </div>
   </section>
+  
+  
+  
+  
   <section>
     <div class="contnt">
       <div class="container">
@@ -26,7 +33,8 @@ get_header(); ?>
           <div class="col-sm-4">
             <div class="lft_sdbar">
               <h2>Services Provided</h2>
-              <ul>
+              <ul>			  
+				<!--<?php wp_list_categories(array('taxonomy' => 'themes_categories'));?>-->
                 <li><a href="javascript:void(0)">House Cleaning</a></li>
                 <li><a href="javascript:void(0)">commercial Cleaning</a></li>
                 <li><a href="javascript:void(0)">window Cleaning</a></li>
@@ -46,28 +54,50 @@ get_header(); ?>
               </div>
             </div>
           </div>
-          <div class="col-sm-8">
+
+
+<div class="col-sm-8">
+		<?php 	$i=0;	while (have_posts()) : the_post();?>
+
+		   
+		  
+ <?php if($i==1) {  ?>
             <div class="windw_contnt">
-              <h2>window Cleaning</h2>
-              <a href="javascript:void(0)"><img  src="<?php echo get_stylesheet_directory_uri();?>/images/springwomen.png" alt="window"></a>
-              <p>Aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quis quaml est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore etas dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit labo mair osam, nisi ut aliquid ex ea commodi consequatur.</p>
+              <h2><?php the_title();?></h2>
+			  <?php the_post_thumbnail();?>
+			  <?php the_content(); ?>
+
             </div>
-            <div class="row">
+			    
+ <?php }if($i==2){ ?>
+<div class="row">
               <div class="col-sm-6">
                 <div class="wnd_cnt"><a href="javascript:void(0)"> <img  src="<?php echo get_stylesheet_directory_uri();?>/images/spring_grl.png" alt="window"></a>
                   <h3><a href="javascript:void(0)">Quidem rerum facilis est et expedita distinctio</a></h3>
                   <p>Voluptatem sequi nesciunt. Neque porro quis quaml est, quilas dolorem ipsum quia dolor sit amet, consectetur, adipisci velitar sed quia non numquam eius modi tempora.</p>
                 </div>
-              </div>
-              <div class="col-sm-6">
-                <div class="wnd_cnt"> <a href="javascript:void(0)"><img  src="<?php echo get_stylesheet_directory_uri();?>/images/spring.png" alt="window"></a>
-                  <h3><a href="javascript:void(0)">Dolores et quas molestias excepturi sint occaecati</a></h3>
+              </div>             
+ <div class="col-sm-6">
+                <div class="wnd_cnt"><a href="javascript:void(0)"> <img  src="<?php echo get_stylesheet_directory_uri();?>/images/spring_grl.png" alt="window"></a>
+                  <h3><a href="javascript:void(0)">Quidem rerum facilis est et expedita distinctio</a></h3>
                   <p>Voluptatem sequi nesciunt. Neque porro quis quaml est, quilas dolorem ipsum quia dolor sit amet, consectetur, adipisci velitar sed quia non numquam eius modi tempora.</p>
                 </div>
               </div>
-            </div>
-            <div class="wnd_btn"> <a href="javascript:void(0)">Schedule your window cleaning estimate today!</a> </div>
+
+
+<?php }?> 
+        
+
+        
+
+
+   
+		  
+		  		<?php 	$i++; endwhile;?>			
+				<?php wp_reset_query();?>     
+		           <div class="wnd_btn"> <a href="javascript:void(0)">Schedule your window cleaning estimate today!</a> </div>
           </div>
+		  
         </div>
       </div>
     </div>
