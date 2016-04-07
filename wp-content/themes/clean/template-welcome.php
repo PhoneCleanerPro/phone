@@ -4,15 +4,24 @@ Template Name: Font-Page Template
 */
 ?>
   <section>
-    <div class="main_banner"> <img class="img-responsive" src="<?php echo get_stylesheet_directory_uri();?>/images/banner.png" alt="banner">
+  <?php global $data;?>
+<?php if($data['banner_image']) :?>
+<div class="main_banner"> <img class="img-responsive" src="<?php echo $data['banner_image'];?>" alt="bannera">
+<?php else: ?>
+<div class="main_banner"> <img class="img-responsive" src="<?php echo get_stylesheet_directory_uri();?>/images/banner.png" alt="banner">
+<?php endif;?>    
       <div class="container">
         <div class="ban_con_main">
           <div class="row">
-            <div class="col-sm-8">
-              <h2>Are you too busy to clean?</h2>
-              <h3>No JOB is too BIG</h3>
-              <p>We are a team based in South East London<br>
-                specialising in a commercial and residential cleaning.</p>
+            <div class="col-sm-8">			
+<?php global $data;?>
+<?php if($data['switch_ex4']) :?>
+<h2><?php echo $data['fast_title'];?></h2>
+<h3><?php echo $data['sec_title'];?></h3>
+<p><?php echo $data['description'];?></p>		
+<?php else: ?>
+<?php endif;?> 
+
               <div class="col-sm-6 cnt_tp_pad">
                 <div class="con_sld_tp">
                   <h3>Quick Contact Form <span>Call Us anytime !</span></h3>
@@ -20,7 +29,12 @@ Template Name: Font-Page Template
 					<?php echo do_shortcode( '[contact-form-7 id="43" title="Quick Contact Form"]' );?>
               </div>
             </div>
-            <div class="col-sm-4"> <img style="padding-top:14px" src="<?php echo get_stylesheet_directory_uri();?>/images/main_ban.png" alt="man"> </div>
+			  <?php global $data;?>
+			<?php if($data['banner_top_image']) :?>
+			<div class="col-sm-4"> <img style="padding-top:14px" src="<?php echo $data['banner_top_image'];?>" alt="banner_top_image"> </div>
+			<?php else: ?>
+			<div class="col-sm-4"> <img style="padding-top:14px" src="<?php echo get_stylesheet_directory_uri();?>/images/main_ban.png" alt="banner_top_image"> </div>
+			<?php endif;?> 
           </div>
         </div>
       </div>
@@ -102,12 +116,29 @@ if ($term) {
         </div>
         <div class="col-sm-8">
           <div class="contnt_ofr_rgt">
-            <h2>special offer</h2>
-            <img src="<?php echo get_stylesheet_directory_uri();?>/images/big_brush.png" alt="main_women">
-            <p>Sign up for a contract for 3 months or more and you get 10% off your fee for the 1st month<br>
-              <b>New customers only</b></p>
+		  <?php global $data;?>
+		<?php if($data['special_title']) :?>
+				<h2><?php echo $data['special_title'];?></h2>
+		<?php else: ?>
+			<h2>special offer</h2>
+		<?php endif;?> 
+		<img src="<?php echo get_stylesheet_directory_uri();?>/images/big_brush.png" alt="main_women">
+		 
+		<?php if($data['special_desc']):?>
+		<p><?php echo $data['special_desc'];?><br>
+		<?php else:?>
+           <p>Sign up for a contract for 3 months or more and you get 10% off your fee for the 1st month<br>
+			<b>New customers only</b></p>
+		<?php endif;?>
+		
+		
+		
+		
+		
+
+
             <div class="cnt_frm">
-              <h2>special offer</h2>
+              <h2><?php echo $data['special_title'];?></h2>
               <p>It’s free and takes less than 30 seconds.</p>
 				  <!--<div class="cnt_contact">
 					<div class="form-group">
@@ -137,11 +168,24 @@ if ($term) {
       <div class="container">
         <div class="main">
           <div class="col-sm-3">
-            <div class="stf_dtls">
-              <h2>Clever Staffs</h2>
+            <div class="stf_dtls">			
+			<?php global $data;?>
+		<?php if($data['staff_title']) :?>
+					 <h2><?php echo $data['staff_title'];?></h2>
+			<?php else: ?>
+					 <h2>Clever Staffs</h2>
+		<?php endif;?>
+
+		<?php global $data;?>
+		<?php if($data['staff_desc']) :?>
+					 <p><?php echo $data['staff_desc'];?></p>
+			<?php else: ?>
               <p>Totam rem aperiam, eaque ipsa quae inventore veritatis quasi architech beatae vitae dicta sunt exleo. nemo enim ipsam voluptatem quia.</p>
-            </div>
+		<?php endif;?>
+		</div>
           </div>
+		  
+		  
 		  
 		<?php
 			global $post;

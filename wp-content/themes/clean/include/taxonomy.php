@@ -8,6 +8,7 @@ function themes_taxonomy() {
             'hierarchical' => true,  
             'label' => 'service categories',  //Display name
             'query_var' => true,
+			'public'=>true,
             'rewrite' => array(
                 'slug' => 'themes', // This controls the base slug that will display before each term
                 'with_front' => false // Don't display the category base before 
@@ -15,5 +16,5 @@ function themes_taxonomy() {
         )  
     );  
 }  
-add_action( 'init', 'themes_taxonomy',0);
+add_action( 'init', 'themes_taxonomy');
 ?>

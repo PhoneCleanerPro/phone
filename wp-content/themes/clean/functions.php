@@ -34,13 +34,15 @@ require_once('wp_bootstrap_navwalker.php');
 include_once('include/custom_post.php');
 //Services Custom Post  Taxonomy
 include_once('include/taxonomy.php');
+//widgets 
+include_once('include/widgets.php');
 // Image Crop resize 
 add_image_size('staffs_image',253,253 ,true);
 
 // Activate Theme Options 
 require_once('Admin/index.php');
 
-
+//For MultiPostThumbnails
 if (class_exists('MultiPostThumbnails')) {
 
 new MultiPostThumbnails(array(

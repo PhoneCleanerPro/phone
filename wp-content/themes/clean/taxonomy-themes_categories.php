@@ -22,10 +22,7 @@ get_header(); ?>
       </div>
     </div>
   </section>
-  
-  
-  
-  
+
   <section>
     <div class="contnt">
       <div class="container">
@@ -34,9 +31,7 @@ get_header(); ?>
             <div class="lft_sdbar">
               <h2>Services Provided</h2>
               <ul>			  
-				<!--<?php wp_list_categories(array('taxonomy' => 'themes_categories'));?>-->
-                <li><a href="javascript:void(0)">House Cleaning</a></li>
-                <li><a href="javascript:void(0)">commercial Cleaning</a></li>
+			  <li><a href="javascript:void(0)">commercial Cleaning</a></li>
                 <li><a href="javascript:void(0)">window Cleaning</a></li>
                 <li><a href="javascript:void(0)">green Cleaning</a></li>
                 <li><a href="javascript:void(0)">residential Cleaning</a></li>
@@ -45,13 +40,15 @@ get_header(); ?>
                 <li><a href="javascript:void(0)">floor care Cleaning</a></li>
                 <li><a href="javascript:void(0)">other special Services</a></li>
               </ul>
-              <div class="con_info">
-                <h3>MORE INFORMATION</h3>
+			  <?php if ( ! dynamic_sidebar( 'more_info' ) ) : ?>
+			                <div class="con_info">
+               <h3>MORE INFORMATION</h3>
                 <p>Tim Wilson,<br>
                   New Street CA 7854, Park Avenue<br>
                   Sydney 25.<br>
-                  +(01) 800 527 4800<span>timwilson@gmail.com</span></p>
+                  +(01) 800 527 4800<span>timwilson@gmail.com</span></p>				  
               </div>
+			  <?php endif;?>
             </div>
           </div>
 
@@ -89,7 +86,7 @@ $i = 1;
 					</div>
               </div>
 			  
-			  <div class="wnd_btn"> <br /><br /><br /><a href="<?php get_the_permalink();?>">Schedule your window cleaning estimate today!sfsdfsd</a> </div>		
+			  <div class="wnd_btn"> <br /><br /><br /><a href="<?php the_permalink();?>">Schedule your window cleaning estimate today!sfsdfsd</a> </div>		
 			  
 			  </div>
 <?php } ?>

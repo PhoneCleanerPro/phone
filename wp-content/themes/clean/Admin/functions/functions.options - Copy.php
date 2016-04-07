@@ -148,7 +148,59 @@ $of_options[] = array( 	"name" 		=> "Banner Top Image",
 						"type" 		=> "media"
 				);
 
+/*$of_options[] = array( 	"name" 		=> "JQuery UI Slider example 1",
+						"desc" 		=> "JQuery UI slider description.<br /> Min: 1, max: 500, step: 3, default value: 45",
+						"id" 		=> "slider_example_1",
+						"std" 		=> "45",
+						"min" 		=> "1",
+						"step"		=> "3",
+						"max" 		=> "500",
+						"type" 		=> "sliderui" 
+				);
+				
+$of_options[] = array( 	"name" 		=> "JQuery UI Slider example 1 with steps(5)",
+						"desc" 		=> "JQuery UI slider description.<br /> Min: 0, max: 300, step: 5, default value: 75",
+						"id" 		=> "slider_example_2",
+						"std" 		=> "75",
+						"min" 		=> "0",
+						"step"		=> "5",
+						"max" 		=> "300",
+						"type" 		=> "sliderui" 
+				);
 
+$of_options[] = array( 	"name" 		=> "JQuery UI Spinner",
+						"desc" 		=> "JQuery UI spinner description.<br /> Min: 0, max: 300, step: 5, default value: 75",
+						"id" 		=> "spinner_example_2",
+						"std" 		=> "75",
+						"min" 		=> "0",
+						"step"		=> "5",
+						"max" 		=> "300",
+						"type" 		=> "spinner" 
+				);
+		
+$of_options[] = array( 	"name" 		=> "Working Hours Set",
+						"desc" 		=> "Working Hour Change ",
+						"id" 		=> "working_hours",
+						"std" 		=> 1,
+						"type" 		=> "switch"
+				);   
+				
+$of_options[] = array( 	"name" 		=> "Switch 2",
+						"desc" 		=> "Switch ON",
+						"id" 		=> "switch_ex2",
+						"std" 		=> 1,
+						"type" 		=> "switch"
+				);
+				
+$of_options[] = array( 	"name" 		=> "Switch 3",
+						"desc" 		=> "Switch with custom labels",
+						"id" 		=> "switch_ex3",
+						"std" 		=> 0,
+						"on" 		=> "Enable",
+						"off" 		=> "Disable",
+						"type" 		=> "switch"
+				);
+*/	
 //Use the clean theme 				
 $of_options[] = array( 	"name" 		=> "Show Banner Title",
 						"desc" 		=> "Banner title show or hidden",
@@ -181,112 +233,37 @@ specialising in a commercial and residential cleaning. ",
 						"fold" 		=> "switch_ex4", /* the switch hook */
 						"type" 		=> "textarea"
 				);
-$url =  ADMIN_DIR . 'assets/images/';
-$of_options[] = array( 	"name" 		=> "Special Offer Icon",
-						"desc" 		=> "Special offer Icon image select hear",
-						"id" 		=> "special_icon",
-						"std" 		=> "big_brush.png",
-						"type" 		=> "images",
-						"options" 	=> array(											
-											'brush.css' 	=> $url . 'brush.png',
-											'big_brush.css' 	=> $url . 'big_brush.png',
-											'accept.css' 	=> $url . 'accept.png',
-											'wrench.css' 	=> $url . 'wrench.png'
-										)
-				);				
-$of_options[] = array( 	"name" 		=> "Special Offer Title",
-						"desc" 		=> "Change Special offce Title ",
-						"id" 		=> "special_title",
-						"std" 		=> "special offer",
-						"type" 		=> "text"
-				);	
-$of_options[] = array( 	"name" 		=> "Special Offer Description",
-						"desc" 		=> "Change Special description ",
-						"id" 		=> "special_desc",
-						"std" 		=> "Sign up for a contract for 3 months or more and you get 10% off your fee for the 1st month
-New customers only",
-						"type" 		=> "textarea"
-				);				
 				
-$of_options[] = array( 	"name" 		=> "Staffs title",
-						"desc" 		=> "Change Staffs Section Title ",
-						"id" 		=> "staff_title",
-						"std" 		=> "Clever Staffs ",
-						"type" 		=> "text"
+				
+$of_options[] = array( 	"name" 		=> "Homepage Layout Manager",
+						"desc" 		=> "Organize how you want the layout to appear on the homepage",
+						"id" 		=> "homepage_blocks",
+						"std" 		=> $of_options_homepage_blocks,
+						"type" 		=> "sorter"
 				);
-$of_options[] = array( 	"name" 		=> "Staffs  Description ",
-						"desc" 		=> "Staffs section description heir ",
-						"id" 		=> "staff_desc",
-						"std" 		=> "Totam rem aperiam, eaque ipsa quae inventore veritatis quasi architech beatae vitae dicta sunt exleo. nemo enim ipsam voluptatem quia.",
-						"type" 		=> "textarea"
+					
+$of_options[] = array( 	"name" 		=> "Slider Options",
+						"desc" 		=> "Unlimited slider with drag and drop sortings.",
+						"id" 		=> "pingu_slider",
+						"std" 		=> "",
+						"type" 		=> "slider"
+				);
+					
+$of_options[] = array( 	"name" 		=> "Background Images",
+						"desc" 		=> "Select a background pattern.",
+						"id" 		=> "custom_bg",
+						"std" 		=> $bg_images_url."bg0.png",
+						"type" 		=> "tiles",
+						"options" 	=> $bg_images,
+				);
+					
+$of_options[] = array( 	"name" 		=> "Typography",
+						"desc" 		=> "Typography option with each property can be called individually.",
+						"id" 		=> "custom_type",
+						"std" 		=> array('size' => '12px','style' => 'bold italic'),
+						"type" 		=> "typography"
 				);
 
-$of_options[] = array( 	"name" 		=> "Footer Section ",
-						"type" 		=> "heading"
-				);
-$of_options[] = array( 	"name" 		=> "Footer Text ",
-						"desc" 		=> "Footer description heir ",
-						"id" 		=> "footer_des",
-						"std" 		=> "contact us now for a free non obligation quote and to discuss your requirements",
-						"type" 		=> "textarea"
-				);
-$of_options[] = array( 	"name" 		=> "CALL NOW Text ",
-						"desc" 		=> "Call Now Change ",
-						"id" 		=> "call",
-						"std" 		=> "CALL NOW: 0788 876 8563",
-						"type" 		=> "text"
-				);
-$of_options[] = array( 	"name" 		=> "Copyright Text ",
-						"desc" 		=> "Change your site copyright information ",
-						"id" 		=> "copy",
-						"std" 		=> "Copyright © 2016 Tim & Wilson. Powered by NinjaAnimations.com",
-						"type" 		=> "text"
-				);
-				
-//social link
-$of_options[] = array( 	"name" 		=> "Social Link ",
-			"type" 		=> "heading"
-	);
-$of_options[] = array( 	"name" 		=> "Social Link ",
-						"desc" 		=> "change your social link ",
-						"id" 		=> "social_link",
-						"std" 		=> 1,
-						"folds"		=> 1,
-						"type" 		=> "switch"
-				);
-				
-$of_options[] = array( 	"name" 		=> "Facebook",
-						"desc" 		=> "facebook link hear,Ex:http://facebook.con/your_name",
-						"id" 		=> "facebook",
-						"std" 		=> "#",
-						"fold" 		=> "social_link", /* the switch hook */
-						"type" 		=> "text"
-				);
-				
-$of_options[] = array( 	"name" 		=> "Twitter",
-						"desc" 		=> "twitter link hear,Ex:http://twitter.con/your_name",
-						"id" 		=> "twitter",
-						"std" 		=> "#",
-						"fold" 		=> "social_link", /* the switch hook */
-						"type" 		=> "text"
-				);
-$of_options[] = array( 	"name" 		=> "Google plus",
-						"desc" 		=> "google+ link hear,Ex:http://google-plus.con/your_name ",
-						"id" 		=> "gplus",
-						"std" 		=> "# ",
-						"fold" 		=> "social_link", /* the switch hook */
-						"type" 		=> "text"
-				);
-				
-				
-				
-				
-/*
-*
-*
-*
-*
-*/				
 $of_options[] = array( 	"name" 		=> "General Settings",
 						"type" 		=> "heading"
 				);
