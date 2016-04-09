@@ -209,8 +209,14 @@ if ($term) {
         <div class="main">
           <div class="col-md-6">
             <div class="serve_dtls">
-              <h2>industries we serve</h2>
-              <p>Architecto beatae vitae dicta sunt explicabo. Nemo emi sai ispam voluptatem quia voluptas sit aspernatur aut odit aut fugit dolores eos qui ratione.</p>
+			<?php global $data;?>
+			<?php if($data['serve'] and $data['serve_desc']):?>
+					<h2><?php echo $data['serve'];?></h2>
+					<p><?php echo $data['serve_desc'];?></p>
+			<?php else:?>
+					<h2>industries we serve</h2>
+					<p>Architecto beatae vitae dicta sunt explicabo. Nemo emi sai ispam voluptatem quia voluptas sit aspernatur aut odit aut fugit dolores eos qui ratione.</p>
+			<?php endif;?>
               <ul>
                 <li><span><img src="<?php echo get_stylesheet_directory_uri();?>/images/airport.png" alt="airport"></span>Airports & Airlines</li>
                 <li><span><img src="<?php echo get_stylesheet_directory_uri();?>/images/school.png" alt="Schools"></span>Schools & Universities</li>

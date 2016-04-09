@@ -220,7 +220,18 @@ $of_options[] = array( 	"name" 		=> "Staffs  Description ",
 						"std" 		=> "Totam rem aperiam, eaque ipsa quae inventore veritatis quasi architech beatae vitae dicta sunt exleo. nemo enim ipsam voluptatem quia.",
 						"type" 		=> "textarea"
 				);
-
+$of_options[] = array( 	"name" 		=> "Serve  Title ",
+						"desc" 		=> "serve section title heir ",
+						"id" 		=> "serve",
+						"std" 		=> "industries we serve",
+						"type" 		=> "text"
+				);
+$of_options[] = array( 	"name" 		=> "Serve  Description  ",
+						"desc" 		=> "serve section description heir ",
+						"id" 		=> "serve_desc",
+						"std" 		=> "Architecto beatae vitae dicta sunt explicabo........",
+						"type" 		=> "textarea"
+				);
 $of_options[] = array( 	"name" 		=> "Footer Section ",
 						"type" 		=> "heading"
 				);
